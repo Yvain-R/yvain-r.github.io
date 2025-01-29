@@ -311,16 +311,16 @@ body {
   } 
   @media all and (max-width: 1024px) {
     .image1 img{
-    content: url("/images/main-UXUI-mobile.png");
+    content: url("images/main-UXUI-mobile.png");
     }
     .image2 img{
-      content: url("/images/main-visual-mobile.png");
+      content: url("images/main-visual-mobile.png");
       }
       .image3 img{
-        content: url("/images/main-motion-mobile.png");
+        content: url("images/main-motion-mobile.png");
         }
         .image4 img{
-          content: url("/images/Main-photo-mobile.png");
+          content: url("images/Main-photo-mobile.png");
           }
     .iconlat {
         display: none;
