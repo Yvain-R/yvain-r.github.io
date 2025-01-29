@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CV</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .pdf {
+        width: 100%;
+        height: 93%;
+    }
+    html,
+    body {
+        overflow: hidden;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+    }
+    .menu{
+       position: relative;
+        padding-top: 24px;
+        padding-right: 32px;
+    }
+    @media all and (max-width: 500px) {
+    .menu{
+      padding-right: 0px;
+    }
+  }  
+
+</style>
+
+<body>
+    <div class="menu">
+        <div class="menu-item" style="padding: 8px 16px;">
+            <a href="index.html"><img style="height: 24px;" src="/images/icon-home.png" alt="Home"/></a>
+          </div>
+          <div class="menu-item"><a class="a-propos" href="Apropo.html"></a></div>
+          <div class="menu-item pushed"><a href="cv.html">CV</a></div>
+        <div class="menu-item"><a href="contact.html">Contact</a></div>
+      </div> 
+    <object class="pdf" data="CV-2025.pdf#navpanes=0" type="application/pdf">
+      <iframe
+		src="CV-2025.pdf#navpanes=0"
+		width="100%"
+		height="100%"
+		style="border: none"
+		title="Fallback PDF Viewer"
+	>
+		<p>
+			Your browser does not support PDFs.
+			<a href="document.pdf">Download the PDF</a>
+		</p>
+	</iframe>
+    </object>
+</body>
+
+</html>

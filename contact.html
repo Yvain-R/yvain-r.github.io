@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CV</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .menu{
+       position: relative;
+        padding-top: 16px;
+        padding-right: 24px;
+    }
+    .position-box{
+      position: relative;
+      top:20vh;
+      width:fit-content;
+      margin: 0 auto;
+    } 
+     .box{
+      display: flex;
+      flex-direction: column;
+      gap: 50px;
+      width:fit-content;
+    } 
+    .main-box{
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .sur-titre{
+      font-size: 2rem;
+      font-weight: 400;
+      padding-bottom: 40px;
+    }
+    .main-titre{
+      color: rgb(16, 16, 16);
+      font-size: 4rem;
+      font-weight: 600;
+    }
+    .adresse{
+      display: flex;
+      justify-content: space-between;
+      font-size: 1.15rem;
+      font-weight: 400;
+      width: 640px;
+    }
+    .adresse2{
+      display: none;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 0.1rem;
+      font-size: 1rem;
+      font-weight: 400;
+    }
+    .follow{
+      font-size: 2rem;
+      display: flex;
+      gap: 16px;
+      width:fit-content;
+      justify-content: center;
+    }
+    .follow a{
+      text-decoration: none;
+      color: rgb(44, 44, 44);
+      font-weight: 400;
+    }
+    ul{
+      margin: 0;
+      padding: 0;
+    }
+    @media all and (max-width: 700px) {
+      .main-titre{
+      font-size: 3rem;
+    }
+    .adresse{
+      display: none;
+      font-size: 1rem;
+      width: 640px;
+    }
+    .adresse2{
+      display: flex;
+    }
+    .follow{
+      font-size: 1.5rem;
+      align-items: center;
+    }
+    .sur-titre{
+      font-size: 1.5rem;
+     padding-bottom: 20px;
+    }
+  }  
+  @media all and (max-width: 500px) {
+      .main-titre{
+      font-size: 2.2rem;
+    }
+    .adresse{
+      display: none;
+      font-size: 1rem;
+      width: 640px;
+    }
+    .adresse2{
+      display: flex;
+    }
+    .follow{
+      font-size: 1.5rem;
+      align-items: center;
+    }
+    .sur-titre{
+      font-size: 1.5rem;
+     padding-bottom: 20px;
+    }
+    .menu{
+      padding-right: 0px;
+    }
+  }  
+</style>
+
+<body>
+    <div class="menu">
+        <div class="menu-item" style="padding: 8px 16px;">
+            <a href="index.html"><img style="height: 24px;" src="/images/icon-home.png" alt="Home"/></a>
+          </div>
+          <div class="menu-item"><a class="a-propos" href="Apropo.html"></a></div>
+          <div class="menu-item"><a href="cv.html">CV</a></div>
+        <div class="menu-item pushed" ><a href="contact.html">Contact</a></div>
+      </div> 
+      <div class="position-box">
+        <div class="box">
+          <div class="sur-titre">
+            Get in touch !
+          </div>
+          <div class="main-box">
+            <div class="main-titre">
+              yvain.r@icloud.com
+            </div> 
+            <div class="adresse">
+              <ul>076 462 14 10</ul> 
+              <ul>/</ul> 
+              <ul>Yvain Revaclier - Route de Loëx, 81 - 1232 Confignon</ul> 
+            </div> 
+            <div class="adresse2">
+              <ul style="margin-bottom: 0.5rem;">076 462 14 10</ul> 
+              <ul>Yvain Revaclier</ul> 
+              <ul>Route de Loëx, 81 - 1232 Confignon</ul> 
+            </div> 
+          </div> 
+          <div class="follow">
+            <a href="https://www.linkedin.com/in/yvain-revaclier-89626879/">
+            Follow me
+            <img style="height: 40px;" src="/images/Linkedin.png" alt="Linkedin"/></a>
+          </div> 
+        </div> 
+      </div>
+       
+</body>
+
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="scripts/jquery-3.7.1.js"></script>
+<style>
+    .body{
+
+    scroll-snap-type: y mandatory;
+}
+.container{
+height: 100vh;
+    scroll-snap-type: y mandatory;
+}
+
+.child {
+	height: 100vh;
+	scroll-snap-align: start;
+	text-align: center;
+}
+</style>
+</head>
+<body>
+    <div class="container">
+        <section class="child" style="background-color: blue;">page 1</section>
+        <section class="child" style="background-color: rgb(39, 216, 60);">page 2</section>
+        <section class="child" style="background-color: rgb(179, 255, 0);">page3</section>
+        <section class="child" style="background-color: blue;">page 1</section>
+    </div>
+
+</body>
