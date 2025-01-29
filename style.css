@@ -191,7 +191,6 @@ body {
     justify-content: center;
     }  
   .main-icon-contener{
-    background-color: aqua;
     display: flex;
     flex-direction: column;
     gap: 4vh;
@@ -202,13 +201,14 @@ body {
     display: flex;
     justify-content: space-around;
   }
+  /*
   .fleche{
     background-color: #91866C;
     position: relative;
     top: 0px;
     opacity: 1;
     transform: translateY(-40px);
-  }
+  }*/
   .iconheader{
     height: 200px;
     width: 200px;
@@ -218,6 +218,7 @@ body {
              -2px -2px 2px #ffffff;
     object-fit: contain;
   }
+  /*
   .iconheader:hover{
     background-color: #333;
     animation: fadein 800ms 500ms cubic-bezier(0.34, 1.56, 0.64, 1);
@@ -228,8 +229,7 @@ body {
       transform: translateY(0);
     }
   }
-  
- 
+  */
   .content-image{
     display: flex;
     align-content: center;
@@ -342,21 +342,12 @@ body {
     .parallax__group {
    height: 80vw;
     }
-    .parallax__layer--base {
-    }
-    .parallax__layer--back {
-    }
+  
     .menu{
       top: 1vh;
     }
-    h1 {
-     
-    }
     h2 {
     font-size: large;
-    }
-    P {
-     
     }
   }  
   @media all and (max-width: 700px) {
