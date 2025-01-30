@@ -259,8 +259,8 @@ body {
     height: 35%;
   }
   .parallax {
-    perspective: 1px;
-    height: 100vh;
+  perspective: 1px;
+  height: 100vh;
    overflow-x: hidden;
    overflow-y: scroll;
    scroll-behavior: smooth;
@@ -363,7 +363,6 @@ body {
   @media all and (max-width: 600px) {
     .parallax {
       perspective: 0px;
-      scroll-snap-type: none ;
     }
     .parallax__layer--base {
       transform: translateZ(0);
@@ -377,7 +376,7 @@ body {
       transform-style:flat;  
     }
     .header-content{
-      top: 0;
+      top: 14vh;
       padding-left: 2rem;
       padding-right: 2rem;
       }
@@ -395,14 +394,15 @@ body {
     justify-content:space-between;
   }
   @media all and (max-width: 500px) {
+    .parallax__group { 
+      scroll-margin: 12vh 0 0 0;
+    }
     .menu{
-      top: 0.5vh;
-      padding: 16px 0px;
-      display: flex;
-      flex-direction:row;
-      justify-content:center;
-      gap: 3vw;
-      padding-right: 0px;
+      justify-content: center;
+      background-color: #f4f4f4e2;
+      top: 0;
+      padding-top: 2.5vh;
+      padding-bottom: 1vh;
     }
     .a-propos:after{
       content: "A propos";
@@ -412,8 +412,8 @@ body {
       width: 70px;
     } 
     h1 {
-      font-size: 28px;
-      line-height: 1.2;
+      font-size: 24px;
+      line-height: 1.6;
      }
      h2 {
       font-size: 14px;
