@@ -176,7 +176,6 @@ body {
     justify-content:center;
     }
   .header{
-    background-color: aliceblue;
   width: 1200px;
   display: flex;
   flex-direction: column;
@@ -185,7 +184,6 @@ body {
   align-content: center;
   }
   .header-titre{
-    background-color: #91866C;
     display: flex;
     gap: 1rem;
     flex-direction: column;
@@ -397,7 +395,6 @@ body {
     justify-content:space-between;
   }
   @media all and (max-width: 500px) {
-   
     .menu{
       top: 0.5vh;
       padding: 16px 0px;
@@ -422,7 +419,7 @@ body {
       font-size: 14px;
       }
       .header-content{
-        top: 12vh;
+        top: 2vh;
         }
       .header{   
       gap: 8vw;
