@@ -176,6 +176,7 @@ body {
     justify-content:center;
     }
   .header{
+  background-color: aquamarine;
   width: 1200px;
   display: flex;
   flex-direction: column;
@@ -184,6 +185,7 @@ body {
   align-content: center;
   }
   .header-titre{
+    background-color: #91866C;
     display: flex;
     gap: 1rem;
     flex-direction: column;
