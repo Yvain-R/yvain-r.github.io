@@ -6,18 +6,19 @@
   <title>CV</title>
   <link rel="stylesheet" href="style.css">
   <style>
-    .menu{
-       position: relative;
-        padding-top: 16px;
-        padding-right: 24px;
-    }
+     body {
+            margin: 0;
+            padding: 0;
+        }
     .position-box{
       position: relative;
-      top:20vh;
+      top:30px;
+      height: 100%;
       width:fit-content;
       margin: 0 auto;
     } 
      .box{
+
       display: flex;
       flex-direction: column;
       gap: 50px;
@@ -59,6 +60,7 @@
       gap: 16px;
       width:fit-content;
       justify-content: center;
+      align-content: center;
     }
     .follow a{
       text-decoration: none;
@@ -111,7 +113,8 @@
      padding-bottom: 20px;
     }
     .menu{
-      padding-right: 0px;
+      position:sticky;
+      top: 0;   
     }
   }  
 </style>
@@ -119,12 +122,12 @@
 <body>
     <div class="menu">
         <div class="menu-item" style="padding: 8px 16px;">
-            <a href="index.html"><img style="height: 24px;" src="images/icon-home.png" alt="Home"/></a>
-          </div>
-          <div class="menu-item"><a class="a-propos" href="Apropo.html"></a></div>
-          <div class="menu-item"><a href="cv.html">CV</a></div>
+          <a href="index.html"><img style="height: 24px;" src="images/icon-home.png" alt="Home"/></a>
+        </div>
+        <div class="menu-item"><a class="a-propos" href="Apropo.html"></a></div>
+        <div class="menu-item"><a href="cv.html">CV</a></div>
         <div class="menu-item pushed" ><a href="contact.html">Contact</a></div>
-      </div> 
+    </div> 
       <div class="position-box">
         <div class="box">
           <div class="sur-titre">
@@ -147,8 +150,8 @@
           </div> 
           <div class="follow">
             <a href="https://www.linkedin.com/in/yvain-revaclier-89626879/">
-            Follow me
-            <img style="height: 40px;" src="images/Linkedin.png" alt="Linkedin"/></a>
+            Follow me</a>
+            <a><img style="height: 40px;" src="images/Linkedin.png" alt="Linkedin"/></a>
           </div> 
         </div> 
       </div>
