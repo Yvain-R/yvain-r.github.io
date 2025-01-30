@@ -403,6 +403,8 @@ body {
       top: 0;
       padding-top: 2.5vh;
       padding-bottom: 1vh;
+      padding-left: 0px;
+      padding-right: 0px;
     }
     .a-propos:after{
       content: "A propos";
@@ -413,13 +415,14 @@ body {
     } 
     h1 {
       font-size: 24px;
-      line-height: 1.6;
+      line-height: 1.5;
      }
      h2 {
       font-size: 14px;
       }
       .header-content{
         top: 2vh;
+        padding: 0px 8px;
         }
       .header{   
       gap: 8vw;
