@@ -407,7 +407,7 @@ body {
         content: url("images/main-visual-vertical.png");
         }
         .image3 img{
-          content: url("images/main-motion.vertical.png");
+          content: url("images/main-motion-vertical.png");
           }
           .image4 img{
             content: url("images/Main-photo-vertical.png");
@@ -419,7 +419,7 @@ body {
     }
     .menu{
       position:relative;
-      top: 60px;
+      top: 78px;
       justify-content: center;
       background-color: #f4f4f4e2;
       padding-top: 2.5vh;
@@ -443,7 +443,7 @@ body {
         padding: 0px 8px;
         }
       .header{   
-      gap: 8vw;
+      gap: 6vw;
       }
       .header-icon{
         padding: 6vw;
@@ -459,8 +459,17 @@ body {
       } 
       .legende{
         font-size: 1rem;
-        padding: 0px;
+        padding: 0px 8px;
         margin-top: 20px;
-       display:block;
+        display: flex;
+        gap: 16px;
+        justify-content: left;
+      }
+      .texte-legende{
+        padding-left: 16px;
+        border-left: 2px solid #91866C;
+      }
+      .icon-legende{
+        width: 80px;
       }
   }
