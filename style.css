@@ -199,6 +199,7 @@ body {
   } 
   .header-icon{
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-around;
   }
   /*
@@ -403,23 +404,24 @@ body {
       content: url("images/main-UXUI-vertical.png");
       }
       .image2 img{
-        content: url("images/main-visual-mobile.png");
+        content: url("images/main-visual-vertical.png");
         }
         .image3 img{
-          content: url("images/main-motion-mobile.png");
+          content: url("images/main-motion.vertical.png");
           }
           .image4 img{
-            content: url("images/Main-photo-mobile.png");
+            content: url("images/Main-photo-vertical.png");
             }
     .parallax__group { 
-      scroll-margin: 12vh 0 0 0;
+      scroll-margin: 1vh 0 0 0;
       scroll-snap-align: start;
       scroll-snap-stop: normal;
     }
     .menu{
+      position:relative;
+      top: 100px;
       justify-content: center;
       background-color: #f4f4f4e2;
-      top: 0;
       padding-top: 2.5vh;
       padding-bottom: 1vh;
       padding-left: 0px;
@@ -428,10 +430,7 @@ body {
     .a-propos:after{
       content: "A propos";
     }
-    .iconheader{
-      height: 70px;
-      width: 70px;
-    } 
+    
     h1 {
       font-size: 24px;
       line-height: 1.5;
@@ -440,17 +439,26 @@ body {
       font-size: 14px;
       }
       .header-content{
-        top: 4vh;
+        top: 15%;
         padding: 0px 8px;
         }
       .header{   
       gap: 8vw;
       }
+      .header-icon{
+        padding: 6vw;
+        gap: 12vw;
+        justify-content: center;
+      }
       .main-icon-contener{
         gap: 1vh;
       } 
+      .iconheader{
+        height: 120px;
+        width: 120px;
+      } 
       .legende{
-        font-size: 0.75rem;
+        font-size: 1rem;
         padding: 0px;
         margin-top: 20px;
        display:block;
