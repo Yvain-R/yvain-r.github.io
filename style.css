@@ -176,6 +176,7 @@ body {
     justify-content:center;
     }
   .header{
+    background-color: aliceblue;
   width: 1200px;
   display: flex;
   flex-direction: column;
