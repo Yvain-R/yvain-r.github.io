@@ -419,7 +419,7 @@ body {
     }
     .menu{
       position:relative;
-      top: 100px;
+      top: 60px;
       justify-content: center;
       background-color: #f4f4f4e2;
       padding-top: 2.5vh;
@@ -447,7 +447,7 @@ body {
       }
       .header-icon{
         padding: 6vw;
-        gap: 12vw;
+        gap: 8vw 12vw;
         justify-content: center;
       }
       .main-icon-contener{
