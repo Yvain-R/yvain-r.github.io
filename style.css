@@ -258,6 +258,10 @@ body {
   .TLphoto{
     height: 35%;
   }
+  .legende{
+   display:none;
+   font-size: 1rem;
+  }
   .parallax {
   perspective: 1px;
   height: 100vh;
@@ -310,6 +314,20 @@ body {
     }
   } 
   @media all and (max-width: 1024px) {
+    .parallax {
+      perspective: 0px;
+    }
+    .parallax__layer--base {
+      transform: translateZ(0);
+    }
+    .parallax__layer--back {
+      transform: translateZ(0);
+    }
+    .parallax__group {
+      height: 100vh;
+   
+      transform-style:flat;  
+    }
     .image1 img{
     content: url("images/main-UXUI-mobile.png");
     }
@@ -339,10 +357,11 @@ body {
       padding-left: 0;
       padding-right: 0;
     }
-    .parallax__group {
-   height: 80vw;
+    .legende{
+      padding: 16px;
+      margin-top: 20px;
+     display:block;
     }
-  
     .menu{
       top: 1vh;
     }
@@ -361,20 +380,6 @@ body {
     }
   }  
   @media all and (max-width: 600px) {
-    .parallax {
-      perspective: 0px;
-    }
-    .parallax__layer--base {
-      transform: translateZ(0);
-    }
-    .parallax__layer--back {
-      transform: translateZ(0);
-    }
-    .parallax__group {
-      height: 50vh;
-      margin-bottom: 10vw;
-      transform-style:flat;  
-    }
     .header-content{
       top: 14vh;
       padding-left: 2rem;
@@ -394,8 +399,22 @@ body {
     justify-content:space-between;
   }
   @media all and (max-width: 500px) {
+    .image1 img{
+      content: url("images/main-UXUI-vertical.png");
+      }
+      .image2 img{
+        content: url("images/main-visual-mobile.png");
+        }
+        .image3 img{
+          content: url("images/main-motion-mobile.png");
+          }
+          .image4 img{
+            content: url("images/Main-photo-mobile.png");
+            }
     .parallax__group { 
       scroll-margin: 12vh 0 0 0;
+      scroll-snap-align: start;
+      scroll-snap-stop: normal;
     }
     .menu{
       justify-content: center;
@@ -421,7 +440,7 @@ body {
       font-size: 14px;
       }
       .header-content{
-        top: 2vh;
+        top: 4vh;
         padding: 0px 8px;
         }
       .header{   
@@ -430,4 +449,10 @@ body {
       .main-icon-contener{
         gap: 1vh;
       } 
+      .legende{
+        font-size: 0.75rem;
+        padding: 0px;
+        margin-top: 20px;
+       display:block;
+      }
   }
