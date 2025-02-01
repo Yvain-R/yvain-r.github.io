@@ -8,6 +8,7 @@ body {
     font-family: Montserrat, Calibri, Tahoma, sans-serif;
     background-color: #f4f4f4;
     color: #333;
+    margin:0px;
   }
   h1 {
     max-width: 800px;
@@ -31,18 +32,6 @@ body {
   a {
     font-weight: 600;
   }
-  .scroll-watcher {
-    height: 10px;
-    position:sticky;
-    top: 20; 
-    z-index: 1000; 
-    background-color:lime;
-    width: 100%; 
-    scale: 1 0;
-    animation: scroll-watcher linear ;
-    animation-timeline: scroll(y);
-    }
-
     @keyframes scroll-watcher {
     to {scale: 1 1; }
     }
@@ -162,7 +151,6 @@ body {
     animation-range: 15% 25%;
   }
   .minibar{
-    background-color: #313131;
     height: 80px;
     width: 5px;
   }
@@ -170,46 +158,27 @@ body {
     position: relative;
     top: 15vh;
     padding-left: 2rem;
-      padding-right: 2rem;
+    padding-right: 2rem;
     display: flex;
     justify-content:center;
     }
-  .header{
-  width: 1200px;
-  display: flex;
-  flex-direction: column;
-  gap: 5vw;
-  justify-content:center;
-  align-content: center;
-  }
-  .header-titre{
+.header{
+    width: 1200px;
     display: flex;
-    gap: 1rem;
     flex-direction: column;
-    align-content: center;
-    justify-content: center;
-    }  
-  .main-icon-contener{
+    gap: 6rem;
+  }
+.header-icon{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content:space-evenly;
+  }
+.main-icon-contener{
     display: flex;
     flex-direction: column;
     gap: 4vh;
-    align-content: center;
-    justify-content: center;
   } 
-  .header-icon{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-  }
-  /*
-  .fleche{
-    background-color: #91866C;
-    position: relative;
-    top: 0px;
-    opacity: 1;
-    transform: translateY(-40px);
-  }*/
-  .iconheader{
+.iconheader{
     height: 200px;
     width: 200px;
     border-radius: 8px;
@@ -218,6 +187,14 @@ body {
              -2px -2px 2px #ffffff;
     object-fit: contain;
   }
+    /*
+  .fleche{
+    background-color: #91866C;
+    position: relative;
+    top: 0px;
+    opacity: 1;
+    transform: translateY(-40px);
+  }*/
   /*
   .iconheader:hover{
     background-color: #333;
@@ -262,6 +239,13 @@ body {
    display:none;
    font-size: 1rem;
   }
+  .texte-legende{
+    padding-left: 16px;
+    border-left: 2px solid #91866C;
+  }
+  .icon-legende{
+    width: 80px;
+  }
   .parallax {
   perspective: 1px;
   height: 100vh;
@@ -298,13 +282,8 @@ body {
     /*scroll-margin: 15vh 0 0 0;*/
     scroll-snap-stop: always;
   }
-  
-  @media all and (max-width: 1200px){
 
-    .iconheader{
-      height: 150px;
-      width: 150px;
-    } 
+  @media all and (max-width: 1200px) {
     .content-TL{
       padding-top: 0vw;
       padding-right: 12vw;
@@ -313,7 +292,25 @@ body {
       height: 20%;
     }
   } 
-  @media all and (max-width: 1024px) {
+  @media all and (max-width: 1024px){
+    .header-content{
+      padding-left: 2rem;
+      padding-right: 2rem;
+      top: 8vh;
+    }
+    .iconheader{
+      height: 200px;
+      width: 200px;
+    } 
+    .header-icon{
+       justify-content:center;
+       padding-left: 20vw;
+       padding-right: 20vw;
+       gap: 5vh 10vw;
+     }
+     .main-icon-contener{
+      gap: 3vh;
+    } 
     .parallax {
       perspective: 0px;
     }
@@ -325,7 +322,7 @@ body {
     }
     .parallax__group {
       height: 100vh;
-   
+      scroll-margin: 5vh 0 0 0;
       transform-style:flat;  
     }
     .image1 img{
@@ -343,10 +340,6 @@ body {
     .iconlat {
         display: none;
     }
-    .header-content{
-      padding-left: 2rem;
-      padding-right: 2rem;
-    }
     .TL{
       display: none;
     }
@@ -358,17 +351,31 @@ body {
       padding-right: 0;
     }
     .legende{
+      position: absolute;
+      bottom:20%;
       padding: 16px;
       margin-top: 20px;
      display:block;
     }
+    .texte-legende{
+      padding-left: 0px;
+      padding-top: 12px;
+      border-left: 0px solid #91866C;
+      border-top: 2px solid #91866C;
+    }
+    .icon-legende{
+      width: 80px;
+    }
     .menu{
       top: 1vh;
-    }
-    h2 {
-    font-size: large;
-    }
+    }  
   }  
+  @media all and (max-width: 960px) {
+    .header-icon{
+       padding-left: 10vw;
+       padding-right: 10vw;
+     }
+    }
   @media all and (max-width: 700px) {
     .iconheader{
       height: 120px;
@@ -394,14 +401,20 @@ body {
       height: 100px;
       width: 100px;
     } 
+    .header-icon{
+      justify-content:space-between;
+    }
   }
-  .header-icon{
-    justify-content:space-between;
-  }
-  @media all and (max-width: 500px) {
+
+  @media all and (max-width: 500px){
     body {
       margin: 0;
       padding: 0;
+  }
+  .image {
+    width: 100%;
+    height: 70vh;
+    object-fit:cover;
   }
     .image1 img{
       content: url("images/main-UXUI-vertical.png");
@@ -461,6 +474,7 @@ body {
         width: 120px;
       } 
       .legende{
+        position:initial;
         font-size: 1rem;
         padding: 0px 8px;
         margin-top: 20px;
@@ -468,11 +482,14 @@ body {
         gap: 16px;
         justify-content: left;
       }
-      .texte-legende{
-        padding-left: 16px;
-        border-left: 2px solid #91866C;
-      }
-      .icon-legende{
-        width: 80px;
-      }
+       .texte-legende{
+        padding-top: 0px;
+         padding-left: 16px;
+         border-top: 0px;
+         border-left: 2px solid #91866C;
+       }
+       .icon-legende{
+         width: 80px;
+       }
+      
   }
