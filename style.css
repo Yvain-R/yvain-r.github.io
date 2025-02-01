@@ -97,14 +97,23 @@ body {
      color: #91866C;
      text-decoration: none;
     }
+    @keyframes slide-in {
+      from {
+        transform: translateX(-150%);
 
+      }
+      to {
+        transform: translateX(0%);
+
+      }
+    }
     .lateral-icon{
       position:sticky;
       z-index: 900;
       top: 3vh;
       right: 0;
       bottom: 0;
-      left: 0px;
+      left: 8px;
       width :min-content;
       height: fit-content;
       display: flex;
@@ -123,19 +132,19 @@ body {
      animation: fade-in linear forwards;*/
       /*animation-range: 0 0;*/
     }
-  .iconlat{
-    height: 80px;
-    width: 80px;
-    border-radius: 4px;
-      background: #efefef;
-      box-shadow:  2px 2px 5px #cacaca,
-             -2px -2px 2px #ffffff;
-    object-fit: contain;
-  }
- /* .iconlatfadein {
-    animation: fade-in linear;
-    animation-timeline: view()
-  }*/
+    .iconlat{
+      height: 80px;
+      width: 80px;
+      border-radius: 4px;
+        background: #efefef;
+        box-shadow:  2px 2px 5px #cacaca,
+               -2px -2px 2px #ffffff;
+      object-fit: contain;
+    }
+   /* .iconlatfadein {
+      animation: fade-in linear;
+      animation-timeline: view()
+    }*/
   .scroller{
     position:sticky;
     z-index: 900;
