@@ -1,0 +1,45 @@
+.gallery {
+    --n: 3; /* number of rows*/
+    --m: 4; /* number of columns */
+    --h: 120px; /* control the height */
+    --w: 180px; /* control the width */
+    --w2: 50px;
+    --g: 10px;  /* control the gap */
+    --f: 1.5;   /* control the scale factor */
+    
+    display: grid;
+    gap: var(--g);
+    width:  calc(var(--m)*var(--w) + (var(--m) - 1)*var(--g));
+    height: calc(var(--n)*var(--h) + (var(--n) - 1)*var(--g));
+
+    max-width: 1440px;
+  }
+  .line1{
+    grid-template-columns: 50px 300px 50px 300px;
+  }
+  .line2{
+    grid-template-columns: 50px 100px 100px 100px;
+  }
+  .line3{
+    grid-template-columns: 100px 100px 50px 100px;
+  }
+  
+  .gallery > img {
+    width: 0;
+    height: 0;
+    min-height: 100%;
+    min-width: 100%;
+    object-fit: cover;
+    cursor: pointer;
+    transition: .35s linear;
+  }
+  
+  .gallery img:hover{
+    width:  calc(var(--w)*var(--f));
+    height: calc(var(--h)*var(--f));
+  }
+  
+  
+  body {
+    place-content: center;
+  }

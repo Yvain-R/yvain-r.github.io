@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="coverflow.css">
+  <script src="action.js"></script>
+
+</head>
+<body>
+  <div class="parallax">
+    <div class="menu">
+        <div class="menu-item pushed" style="padding: 9px 16px;">
+          <a href="index.html"><img style="height: 24px;" src="images/icon-home.png" alt="Home"/></a>
+        </div>
+        <div class="menu-item"><a class="a-propos" href="Apropo.html"></a></div>
+        <div class="menu-item"><a href="curiculum.html">CV</a></div>
+        <div class="menu-item"><a href="contact.html">Contact</a></div>
+    </div> 
+    <div class="lateral-icon">
+      <a href="#UX-UI" data-target="UX-UI"><img class="iconlat" src="images/icon-UXUI.png" alt="image UX UI"/></a>
+      <a href="#visual" data-target="visual"><img class="iconlat" src="images/icon-visual.png" alt="image UX UI"/></a>
+      <a href="#motion" data-target="motion"><img class="iconlat" src="images/icon-motion.png" alt="image UX UI"/></a>
+      <a href="#photographie" data-target="photographie"><img class="iconlat" src="images/icon-photo.png" alt="image UX UI"/></a>
+    </div>    
+    <div class="parallax__group" >
+      <div class="parallax__layer parallax__layer--back" >   
+      </div>
+      <div class="parallax__layer parallax__layer--base" >
+        <div class="header-content">
+          <div class="header">
+            <div class="header-titre">
+              <h1 style="text-align: center;">Bonjour, je m’appelle Yvain, je suis designer graphique polyvalent et spécialisé dans la création numérique.</h1>
+            </div> 
+            <div class="header-icon">
+              <div class="main-icon-contener">
+                <a href="#UX-UI"><img class="iconheader" src="images/icon-UXUI.png" alt="image UX UI"/></a>
+                <h2>UX/UI</h2>
+              </div>
+              <div class="main-icon-contener">
+                <a href="#visual"><img class="iconheader" src="images/icon-visual.png" alt="image visual"/></a>
+                <h2>VISUAL</h2>
+              </div>
+              <div class="main-icon-contener">
+                <a href="#motion"><img class="iconheader" src="images/icon-motion.png" alt="image motion"/></a>
+                <h2>MOTION</h2>
+              </div>
+              <div class="main-icon-contener">
+                <a href="#photographie"><img class="iconheader" src="images/icon-photo.png" alt="image photo"/></a>
+                <h2>PHOTO</h2>
+              </div>
+            </div>  
+          </div> 
+        </div>
+      </div>
+    </div>
+    <div class="parallax__group" id="UX-UI">
+      <div class="parallax__layer parallax__layer--back"> 
+        <div class="content-image image1"><img class="image" src="images/main-UXUI.png" alt="image UX UI"/></div>
+        <div class="legende">
+          <img class="icon-legende" src="images/icon-UXUI-legende.png" alt="UX/UI"/>
+          <div class="texte-legende">Expérience utilisateur (UX) <br> Conception visuelle <br> Interface Web & App (UI) <br> Interactivité</div>
+        </div>
+      </div>
+      <div class="parallax__layer parallax__layer--base ">
+        <div class="content-TL"><img class="TL" src="images/TL-UXUI.png" alt="TL-UXUI"/></div>
+      </div>
+    </div>
+    <div class="parallax__group" id="visual">
+      <div class="parallax__layer parallax__layer--back" > 
+        <div class="content-image image2"><img class="image" src="images/main-visual.png" alt="image UX UI"/></div>          
+        <div class="legende">
+          <img class="icon-legende"src="images/icon-visual-legende.png" alt="Visual"/>
+          <div class="texte-legende">Identité visuelle <br> Branding <br> Graphisme <br> Logotype & Illustration</div>
+        </div>
+      </div>
+      <div class="parallax__layer parallax__layer--base ">
+        <div class="content-TL"><img class="TL" src="images/TL-Creative.png" alt="Visual"/></div>
+      </div>
+    </div>
+    <div class="parallax__group" id="motion">
+      <div class="parallax__layer parallax__layer--back" >  
+       <div class="content-image image3"><img class="image" src="images/main-motion.png" alt="image UX UI"/></div>          
+       <div class="legende">
+          <img class="icon-legende" src="images/icon-motion-legende.png" alt="motion"/>
+          <div class="texte-legende">Générique audiovisuel <br> Teaser & Splashscreen<br> animations fonctionnelles <br> Visual feedback</div>
+        </div>
+      </div>
+      <div class="parallax__layer parallax__layer--base ">
+        <div class="content-TL"><img class="TL" src="images/TL-Motion.png" alt="Motion"/></div>
+      </div>
+    </div>
+    <div class="parallax__group" id="photographie">
+      <div class="parallax__layer parallax__layer--back" >  
+       <div class="content-image image4"><img  class="image" src="images/main-photo.png" alt="image UX UI"/></div>          
+       <div class="legende">
+          <img class="icon-legende" src="images/icon-photo-legende.png" alt="Photo"/>
+          <div class="texte-legende">Photographie de rue <br> Photographie de portrait <br> Numérique et argentique <br> Noir/blanc et couleur </div>
+        </div>
+      </div>
+      <div class="parallax__layer parallax__layer--base ">
+        <div class="content-TL"><img class="TL" src="images/TL-Photographies.png" alt="Photo"/></div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

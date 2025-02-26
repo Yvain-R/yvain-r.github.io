@@ -1,0 +1,82 @@
+	/* Config */
+	:root {
+		--slide-width: 56vmin;
+		--slide-height: calc(var(--slide-width) * 1.4);
+		--gap: 1vw;
+	}
+
+	/* Default Colors */
+	/* html,
+	body {
+		background: #ffffff;
+		color: #fff;
+		font-family: "Rubik", sans-serif;
+	}
+
+	 Center Carousel in <body> 
+	html { height: 100%; }
+	body {
+		height: 100%;
+		display: grid;
+		place-items: safe center;
+	}
+*/
+	/* Basic Carousel Styles */
+	.slides {
+		list-style: none;
+		overflow: scroll;
+		width: 100%;
+		white-space: nowrap;
+		touch-action: pan-x;
+	}
+
+	/* Only scroll-snap when not dragging */
+	.slides:not(.dragging) {
+		scroll-snap-type: x mandatory;
+	}
+
+	.slide {
+		padding: 0;
+		margin: 0;
+		display: inline-block;
+		width: 500px;
+		height: 500px;
+		scroll-snap-align: center;
+		position: relative;
+		overflow: clip; /* Use clip, not hidden! */
+	}
+
+	.slide + .slide {
+		margin-left: var(--gap);
+	}
+
+	.slide > img {
+		display: block;
+		width: 100%;
+		height: 100%;
+		/* Stick 'm to the right of their frame */
+		position: absolute;
+		right: 0;
+        object-fit: cover;
+		object-position: 100% 0;
+	}
+
+	/* Scroll-Timeline Supported, Yay! */
+		@supports (animation-timeline: view()) {
+			@keyframes adjust-image {
+				0% {
+					scale: 0.8;
+				}
+                50% {
+					scale: 1;
+				}
+				100% {
+					scale: 0.8;
+				}
+			}
+
+			.slide > img {
+				animation: adjust-image linear both;
+				animation-timeline: view(x);
+			}
+		}

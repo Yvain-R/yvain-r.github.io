@@ -5,12 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Portfolio</title>
   <link rel="stylesheet" href="style.css">
-  <script src="scripts/jquery-3.7.1.js"></script>
+  <link rel="stylesheet" href="picturegrid.css">
+  <script src="action.js"></script>
 
 </head>
-<body>
-  <div class="parallax">
-    <div class="menu">
+  <body>
+    <div class="menu" id="menu">
         <div class="menu-item pushed" style="padding: 9px 16px;">
           <a href="index.html"><img style="height: 24px;" src="images/icon-home.png" alt="Home"/></a>
         </div>
@@ -18,16 +18,8 @@
         <div class="menu-item"><a href="curiculum.html">CV</a></div>
         <div class="menu-item"><a href="contact.html">Contact</a></div>
     </div> 
-    <div class="lateral-icon">
-      <a href="#UX-UI"><img class="iconlat" src="images/icon-UXUI.png" alt="image UX UI"/></a>
-      <a href="#visual"><img class="iconlat" src="images/icon-visual.png" alt="image UX UI"/></a>
-      <a href="#motion"><img class="iconlat" src="images/icon-motion.png" alt="image UX UI"/></a>
-      <a href="#photographie"><img class="iconlat" src="images/icon-photo.png" alt="image UX UI"/></a>
-    </div>    
-    <div class="parallax__group" >
-      <div class="parallax__layer parallax__layer--back" >   
-      </div>
-      <div class="parallax__layer parallax__layer--base" >
+    <div class="content"> 
+      <div class="group" >
         <div class="header-content">
           <div class="header">
             <div class="header-titre">
@@ -54,55 +46,239 @@
           </div> 
         </div>
       </div>
-    </div>
-    <div class="parallax__group" id="UX-UI">
-      <div class="parallax__layer parallax__layer--back"> 
+      <div class="group" id="UX-UI" >
         <div class="content-image image1"><img class="image" src="images/main-UXUI.png" alt="image UX UI"/></div>
         <div class="legende">
           <img class="icon-legende" src="images/icon-UXUI-legende.png" alt="UX/UI"/>
           <div class="texte-legende">Expérience utilisateur (UX) <br> Conception visuelle <br> Interface Web & App (UI) <br> Interactivité</div>
         </div>
       </div>
-      <div class="parallax__layer parallax__layer--base ">
-        <div class="content-TL"><img class="TL" src="images/TL-UXUI.png" alt="TL-UXUI"/></div>
-      </div>
-    </div>
-    <div class="parallax__group" id="visual">
-      <div class="parallax__layer parallax__layer--back" >  
-        <div class="content-image image2"><img class="image" src="images/main-visual.png" alt="image UX UI"/></div>          
+      <div class="group"  id="visual" style="background-color: rgb(219, 219, 219); padding-top: 3vh;">
+        <ul class="slides" id="slides">
+					<li class="slide">
+						<img src="images/car1.png" alt="Image #10" draggable="false">
+					</li>
+					<li class="slide">
+						<img src="images/car2.png" alt="Image #11" draggable="false">
+					</li>
+					<li class="slide">
+						<img src="images/car3.png" alt="Image #12" draggable="false">
+					</li>
+					<li class="slide">
+						<img src="images/car4.png" alt="Image #13" draggable="false">
+					</li>
+					<li class="slide">
+						<img src="images/car5.png" alt="Image #14" draggable="false">
+					</li>
+					<li class="slide">
+						<img src="images/car6.png" alt="Image #15" draggable="false">
+					</li>
+          <li class="slide">
+						<img src="images/car7.png" alt="Image #15" draggable="false">
+					</li>
+          <li class="slide">
+						<img src="images/car8.png" alt="Image #15" draggable="false">
+					</li>
+          <li class="slide">
+						<img src="images/car9.png" alt="Image #15" draggable="false">
+					</li>
+          <li class="slide">
+						<img src="images/car10.png" alt="Image #15" draggable="false">
+					</li>
+          <li class="slide">
+						<img src="images/car11.png" alt="Image #15" draggable="false">
+					</li>
+          <li class="slide">
+						<img src="images/car12.png" alt="Image #15" draggable="false">
+					</li>
+          <li class="slide">
+						<img src="images/car13.png" alt="Image #15" draggable="false">
+					</li>
+          <li class="slide">
+						<img src="images/car14.png" alt="Image #15" draggable="false">
+					</li>
+				</ul>
         <div class="legende">
           <img class="icon-legende"src="images/icon-visual-legende.png" alt="Visual"/>
           <div class="texte-legende">Identité visuelle <br> Branding <br> Graphisme <br> Logotype & Illustration</div>
         </div>
       </div>
-      <div class="parallax__layer parallax__layer--base ">
-        <div class="content-TL"><img class="TL" src="images/TL-Creative.png" alt="Visual"/></div>
-      </div>
-    </div>
-    <div class="parallax__group" id="motion">
-      <div class="parallax__layer parallax__layer--back" >  
-       <div class="content-image image3"><img class="image" src="images/main-motion.png" alt="image UX UI"/></div>          
-       <div class="legende">
+      <div class="group group-motion" id="motion">
+        <div class="bkgvideo">
+          <video class="vid"
+            autoplay
+            loop
+            muted>
+            <source src="images/showreel.webm" type="video/webm" />
+            <source src="images/showreel.mp4" type="video/mp4" />     
+            <p>Votre navigateur ne prend pas en charge les vidéos HTML5. Voici, à la place, un <a href="rabbit320.mp4">lien à la vidéo</a>.</p>
+          </video>
+        </div>
+        <div class="legende">
           <img class="icon-legende" src="images/icon-motion-legende.png" alt="motion"/>
-          <div class="texte-legende">Générique audiovisuel <br> Teaser & Splashscreen<br> animations fonctionnelles <br> Visual feedback</div>
+          <div class="texte-legende" style="color: rgb(255, 255, 255);">Générique audiovisuel <br> Teaser & Splashscreen<br> Animations fonctionnelles <br> Visual feedback</div>
         </div>
       </div>
-      <div class="parallax__layer parallax__layer--base ">
-        <div class="content-TL"><img class="TL" src="images/TL-Motion.png" alt="Motion"/></div>
+      <div class="group" id="photographie" style="padding-top: 6vh; padding-bottom: 10vh;" >
+        <div class="container">
+          <div class="expandable" id="content">
+            <div class=" masonry-list">
+              <img src="images/photos/p2.jpg" alt="">
+              <img src="images/photos/p1.jpg" alt="">
+              <img src="images/photos/p6.jpg" alt="">
+              <img src="images/photos/p8.jpg" alt="">
+              <img src="images/photos/p10.jpg" alt="">
+              <img src="images/photos/p11.jpg" alt="">
+              <img src="images/photos/p12.jpg" alt="">
+              <img src="images/photos/p13.jpg" alt="">
+              <img src="images/photos/p14.jpg" alt="">
+              <img src="images/photos/p15.jpg" alt="">
+              <img src="images/photos/p16.jpg" alt="">
+              <img src="images/photos/p9.jpg" alt="">
+              <img src="images/photos/p18.jpg" alt="">
+              <img src="images/photos/p19.jpg" alt="">
+              <img src="images/photos/p20.jpg" alt="">
+              <img src="images/photos/p21.jpg" alt="">
+              <img src="images/photos/p3.jpg" alt="">
+              <img src="images/photos/p22.jpg" alt="">
+              <img src="images/photos/p23.jpg" alt="">
+              <img src="images/photos/p24.jpg" alt="">
+              <img src="images/photos/p25.jpg" alt="">
+              <img src="images/photos/p26.jpg" alt="">
+              <img src="images/photos/p27.jpg" alt="">
+              <img src="images/photos/p5.jpg" alt="">
+              <img src="images/photos/p28.jpg" alt="">
+              <img src="images/photos/p29.jpg" alt="">
+              <img src="images/photos/p7.jpg" alt="">
+              <img src="images/photos/p30.jpg" alt="">
+              <img src="images/photos/p4.jpg" alt="">
+              <img src="images/photos/p32.jpg" alt="">
+              <img src="images/photos/p33.jpg" alt="">
+              <img src="images/photos/p34.jpg" alt="">
+              <img src="images/photos/p35.jpg" alt="">
+              <img src="images/photos/p36.jpg" alt="">
+              <img src="images/photos/p37.jpg" alt="">
+              <img src="images/photos/p38.jpg" alt="">
+              <img src="images/photos/p39.jpg" alt="">
+              <img src="images/photos/p40.jpg" alt="">
+              <img src="images/photos/p41.jpg" alt="">
+              <img src="images/photos/p42.jpg" alt="">
+              <img src="images/photos/p43.jpg" alt="">
+              <img src="images/photos/p44.jpg" alt="">
+              <img src="images/photos/p45.jpg" alt="">
+              <img src="images/photos/p46.jpg" alt="">
+              <img src="images/photos/p47.jpg" alt="">
+              <img src="images/photos/p48.jpg" alt="">
+            </div>
+        </div>
       </div>
-    </div>
-    <div class="parallax__group" id="photographie">
-      <div class="parallax__layer parallax__layer--back" >  
-       <div class="content-image image4"><img  class="image" src="images/main-photo.png" alt="image UX UI"/></div>          
-       <div class="legende">
+      <div class="button-container">
+        <div class="menu-item" id="toggleButton">Afficher plus</div>
+      </div>
+        <div class="legende">
           <img class="icon-legende" src="images/icon-photo-legende.png" alt="Photo"/>
           <div class="texte-legende">Photographie de rue <br> Photographie de portrait <br> Numérique et argentique <br> Noir/blanc et couleur </div>
         </div>
       </div>
-      <div class="parallax__layer parallax__layer--base ">
-        <div class="content-TL"><img class="TL" src="images/TL-Photographies.png" alt="Photo"/></div>
-      </div>
     </div>
-  </div>
-</body>
+    <script>
+      var prevScrollpos = window.pageYOffset;
+      window.onscroll = function() {
+      var currentScrollPos = window.pageYOffset;
+        if (prevScrollpos > currentScrollPos) {
+          document.getElementById("menu").style.top = "0";
+        } else {
+          document.getElementById("menu").style.top = "-80px";
+        }
+        prevScrollpos = currentScrollPos;
+      }
+     
+      function handleVideoPlayback() {
+    const video = document.querySelector('video');
+    if (!video) return;
+    video.muted = true;
+    
+    function checkVisibility() {
+        const rect = video.getBoundingClientRect();
+        const videoHeight = rect.height;
+        const halfVisible = rect.top + videoHeight / 2 >= 0 && rect.bottom - videoHeight / 2 <= window.innerHeight;
+        const fullyOut = rect.bottom <= 0 || rect.top >= window.innerHeight;
+        
+        if (halfVisible) {
+            if (video.paused) {
+                video.play().catch(error => console.error('Playback error:', error));
+            }
+        } else {
+            if (!video.paused) {
+                video.pause();
+            }
+        }
+        
+        if (fullyOut) {
+            video.currentTime = 0;
+        }
+    }
+    
+    function toggleMute() {
+        video.muted = !video.muted;
+        muteButton.innerHTML = video.muted 
+            ? '<svg width="24" height="24" viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg"><path d="M16.5 12L19 14.5M19 9.5L16.5 12M4 9V15H8L13 20V4L8 9H4Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>'
+            : '<svg width="24" height="24" viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg"><path d="M4 9V15H8L13 20V4L8 9H4Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M16 8L20 12L16 16" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M18 6L22 12L18 18" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+    }
+    
+    const muteButton = document.createElement('button');
+    muteButton.innerHTML = '<svg width="24" height="24" viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg"><path d="M16.5 12L19 14.5M19 9.5L16.5 12M4 9V15H8L13 20V4L8 9H4Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+    muteButton.style.position = 'absolute';
+    muteButton.style.bottom = '20px';
+    muteButton.style.right = '20px';
+    muteButton.style.padding = '8px';
+    muteButton.style.background = 'rgba(0, 0, 0, 0.5)';
+    muteButton.style.border = 'none';
+    muteButton.style.borderRadius = '50%';
+    muteButton.style.cursor = 'pointer';
+    muteButton.style.display = 'flex';
+    muteButton.style.alignItems = 'center';
+    muteButton.style.justifyContent = 'center';
+    muteButton.style.zIndex = '10';
+    
+    function positionButton() {
+        const videoRect = video.getBoundingClientRect();
+        const containerRect = video.parentElement.getBoundingClientRect();
+        muteButton.style.right = `${Math.max(20, containerRect.right - videoRect.right + 20)}px`;
+        muteButton.style.bottom = `${Math.max(20, containerRect.bottom - videoRect.bottom + 20)}px`;
+    }
+    
+    muteButton.addEventListener('click', toggleMute);
+    video.parentElement.style.position = 'relative';
+    video.parentElement.appendChild(muteButton);
+    
+    window.addEventListener('scroll', checkVisibility);
+    window.addEventListener('resize', () => {
+        checkVisibility();
+        positionButton();
+    });
+    document.addEventListener('DOMContentLoaded', () => {
+        checkVisibility();
+        positionButton();
+    });
+}
+
+handleVideoPlayback();
+
+document.getElementById("toggleButton").addEventListener("click", function() {
+            var content = document.getElementById("content");
+            var container = document.querySelector(".container");
+            if (content.classList.contains("expanded")) {
+                content.classList.remove("expanded");
+                container.style.height = "500px";
+                this.textContent = "Afficher plus";
+            } else {
+                content.classList.add("expanded");
+                container.style.height = "auto";
+                this.textContent = "Afficher moins";
+            }
+        });
+
+    </script>
+  </body>
 </html>
