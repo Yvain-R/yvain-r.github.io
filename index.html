@@ -182,6 +182,7 @@
       </div>
     </div>
     <script>
+      //fonction menu  
       var prevScrollpos = window.pageYOffset;
       window.onscroll = function() {
       var currentScrollPos = window.pageYOffset;
@@ -192,11 +193,16 @@
         }
         prevScrollpos = currentScrollPos;
       }
-     
-      function handleVideoPlayback() {
+   //fonction video player  
+   function handleVideoPlayback() {
     const video = document.querySelector('video');
     if (!video) return;
     video.muted = true;
+    video.controls = false;
+    
+    function isMobile() {
+        return /Mobi|Android/i.test(navigator.userAgent);
+    }
     
     function checkVisibility() {
         const rect = video.getBoundingClientRect();
@@ -204,18 +210,19 @@
         const halfVisible = rect.top + videoHeight / 2 >= 0 && rect.bottom - videoHeight / 2 <= window.innerHeight;
         const fullyOut = rect.bottom <= 0 || rect.top >= window.innerHeight;
         
-        if (halfVisible) {
-            if (video.paused) {
-                video.play().catch(error => console.error('Playback error:', error));
+        if (!isMobile()) {
+            if (halfVisible) {
+                if (video.paused) {
+                    video.play().catch(error => console.error('Playback error:', error));
+                }
+            } else {
+                if (!video.paused) {
+                    video.pause();
+                }
             }
-        } else {
-            if (!video.paused) {
-                video.pause();
+            if (fullyOut) {
+                video.currentTime = 0;
             }
-        }
-        
-        if (fullyOut) {
-            video.currentTime = 0;
         }
     }
     
@@ -226,45 +233,64 @@
             : '<svg width="24" height="24" viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg"><path d="M4 9V15H8L13 20V4L8 9H4Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M16 8L20 12L16 16" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M18 6L22 12L18 18" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>';
     }
     
-    const muteButton = document.createElement('button');
-    muteButton.innerHTML = '<svg width="24" height="24" viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg"><path d="M16.5 12L19 14.5M19 9.5L16.5 12M4 9V15H8L13 20V4L8 9H4Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>';
-    muteButton.style.position = 'absolute';
-    muteButton.style.bottom = '20px';
-    muteButton.style.right = '20px';
-    muteButton.style.padding = '8px';
-    muteButton.style.background = 'rgba(0, 0, 0, 0.5)';
-    muteButton.style.border = 'none';
-    muteButton.style.borderRadius = '50%';
-    muteButton.style.cursor = 'pointer';
-    muteButton.style.display = 'flex';
-    muteButton.style.alignItems = 'center';
-    muteButton.style.justifyContent = 'center';
-    muteButton.style.zIndex = '10';
-    
-    function positionButton() {
-        const videoRect = video.getBoundingClientRect();
-        const containerRect = video.parentElement.getBoundingClientRect();
-        muteButton.style.right = `${Math.max(20, containerRect.right - videoRect.right + 20)}px`;
-        muteButton.style.bottom = `${Math.max(20, containerRect.bottom - videoRect.bottom + 20)}px`;
+    function toggleFullscreen() {
+        if (video.requestFullscreen) {
+            video.requestFullscreen();
+        } else if (video.webkitRequestFullscreen) {
+            video.webkitRequestFullscreen();
+        } else if (video.msRequestFullscreen) {
+            video.msRequestFullscreen();
+        }
     }
     
-    muteButton.addEventListener('click', toggleMute);
+    function createButton(icon, onClick) {
+        const button = document.createElement('button');
+        button.innerHTML = icon;
+        button.style.position = 'absolute';
+        button.style.bottom = '20px';
+        button.style.right = '20px';
+        button.style.padding = '8px';
+        button.style.background = 'rgba(0, 0, 0, 0.5)';
+        button.style.border = 'none';
+        button.style.borderRadius = '50%';
+        button.style.cursor = 'pointer';
+        button.style.display = 'flex';
+        button.style.alignItems = 'center';
+        button.style.justifyContent = 'center';
+        button.style.zIndex = '10';
+        button.addEventListener('click', onClick);
+        return button;
+    }
+    
+    const muteButton = createButton('<svg width="24" height="24" viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg"><path d="M16.5 12L19 14.5M19 9.5L16.5 12M4 9V15H8L13 20V4L8 9H4Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>', toggleMute);
+    
     video.parentElement.style.position = 'relative';
     video.parentElement.appendChild(muteButton);
     
+    if (isMobile()) {
+        video.removeAttribute('autoplay');
+        const playButton = createButton('<svg width="48" height="48" viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg"><path d="M8 5V19L19 12L8 5Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>', () => {
+            video.play();
+            playButton.style.display = 'none';
+        });
+        playButton.style.top = '50%';
+        playButton.style.left = '50%';
+        playButton.style.transform = 'translate(-50%, -50%)';
+        video.parentElement.appendChild(playButton);
+        
+        const fullscreenButton = createButton('<svg width="24" height="24" viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg"><path d="M4 4H10V6H6V10H4V4Z"/><path d="M20 4H14V6H18V10H20V4Z"/><path d="M4 20H10V18H6V14H4V20Z"/><path d="M20 20H14V18H18V14H20V20Z"/></svg>', toggleFullscreen);
+        fullscreenButton.style.right = '60px';
+        video.parentElement.appendChild(fullscreenButton);
+    }
+    
     window.addEventListener('scroll', checkVisibility);
-    window.addEventListener('resize', () => {
-        checkVisibility();
-        positionButton();
-    });
-    document.addEventListener('DOMContentLoaded', () => {
-        checkVisibility();
-        positionButton();
-    });
+    window.addEventListener('resize', checkVisibility);
+    document.addEventListener('DOMContentLoaded', checkVisibility);
 }
 
 handleVideoPlayback();
 
+//fonction photo container 
 document.getElementById("toggleButton").addEventListener("click", function() {
             var content = document.getElementById("content");
             var container = document.querySelector(".container");
