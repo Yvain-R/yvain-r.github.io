@@ -329,6 +329,9 @@ body {
   column-gap: 5px;
 
   }
+  #photographie{
+    padding-bottom: 10vh;
+  }
   .container {
     width: auto;
     margin: auto;
@@ -434,6 +437,27 @@ body {
        padding-right: 10vw;
      }
     }
+    @media all and (max-width: 768px) {
+      .container {
+        height: 500px;
+        overflow: hidden;
+    }
+    .expandable {
+        height: 500px;
+        overflow: hidden;
+    }
+    .expanded {
+        height: auto;
+    }
+    .button-container {
+        display: flex;
+        margin-top: 10px;
+    }
+    #photographie{
+      padding-bottom: 22vh;
+    }
+
+    }
   @media all and (max-width: 700px) {
     .iconheader{
       height: 120px;
@@ -503,7 +527,7 @@ body {
     }
     .menu{
       justify-content: center;
-      background-color: #f4f4f4e2;
+      background-color: #f4f4f4;
       padding-top: 1.5vh;
       padding-bottom: 1vh;
       padding-left: 0px;
