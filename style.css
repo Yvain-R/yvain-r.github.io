@@ -75,7 +75,20 @@ body {
       transition: top 0.4s ease; /* Animation uniquement sur top */
       overflow: visible; 
       pointer-events: auto; /* Réactive les événements pour le menu */
-  }
+  } 
+  .menu-cv{
+    background-color: #f4f4f4df;
+    position: relative; /* Assure que le menu reste en haut */
+    z-index: 900;
+    padding: 16px 24px;
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+    gap: 2vw;
+    transition: top 0.4s ease; /* Animation uniquement sur top */
+    overflow: visible; 
+    pointer-events: auto; /* Réactive les événements pour le menu */
+}
   .hide {
     transform: translateY(-100%); /* Fait disparaître le menu vers le haut */
   }
