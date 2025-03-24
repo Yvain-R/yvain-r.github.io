@@ -12,10 +12,10 @@ body {
     padding: 0;
   }
   .content {
-    overflow-x: hidden;
-    overflow-y: scroll;
+    overflow-y: auto;  /* Laisse le défilement horizontal libre pour cette section */
     scroll-behavior: smooth;
-    scroll-snap-type: y mandatory ;
+    scroll-snap-type: y mandatory;
+    height: 100vh; /* Définit la hauteur de la zone scrollable */
   }
   .group {
     position: relative;
@@ -23,10 +23,8 @@ body {
     flex-direction: column;
     gap: 50px;
     justify-content: center;
-    padding-bottom: 15vh;
-    /*margin-bottom: 10vw;*/
+    height: 100vh; /* Permet le snap sur toute la hauteur */
     scroll-snap-align: start;
-    /*scroll-margin: 15vh 0 0 0;*/
     scroll-snap-stop: always;
   }
 
@@ -62,24 +60,25 @@ body {
       }
     }
 
-    .menu{
-      background-color: #f4f4f4;
-      position:sticky;
+    #menu {
+      background-color: #3016dce2;
+      position: fixed; /* Assure que le menu reste en haut */
       z-index: 900;
-      top: 0.5vh;
+      top: 0px; /* Par défaut, le menu est visible */
       right: 0;
-      bottom: 0;
-      left: 0px;
+      left: 0;
       padding: 16px 24px;
       display: flex;
-      flex-direction:row;
+      flex-direction: row;
       justify-content: right;
       gap: 2vw;
-      -webkit-transition: all 0.4s linear;
-      -moz-transition: all 0.4s linear;
-       -o-transition: all 0.4s linear;
-      transition: all 0.4s linear;
-    }
+      transition: top 0.4s ease; /* Animation uniquement sur top */
+      overflow: visible; 
+      pointer-events: auto; /* Réactive les événements pour le menu */
+  }
+  .hide {
+    transform: translateY(-100%); /* Fait disparaître le menu vers le haut */
+  }
   
     .menu-item{
       height: 100%;

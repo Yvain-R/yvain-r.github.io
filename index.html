@@ -7,23 +7,22 @@
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="picturegrid.css">
   <script src="action.js"></script>
-
 </head>
-  <body>
+  <body> 
     <div class="menu" id="menu">
-        <div class="menu-item pushed" style="padding: 9px 16px;">
-          <a href="index.html"><img style="height: 24px; width: 24px;" src="images/icon-home.png" alt="Home"/></a>
-        </div>
-        <div class="menu-item"><a class="a-propos" href="Apropo.html"></a></div>
-        <div class="menu-item"><a href="curiculum.html">CV</a></div>
-        <div class="menu-item"><a href="contact.html">Contact</a></div>
-    </div> 
-    <div class="content"> 
+      <div class="menu-item pushed" style="padding: 9px 16px;">
+        <a href="index.html"><img style="height: 24px; width: 24px;" src="images/icon-home.png" alt="Home"/></a>
+      </div>
+      <div class="menu-item"><a class="a-propos" href="Apropo.html"></a></div>
+      <div class="menu-item"><a href="curiculum.html">CV</a></div>
+      <div class="menu-item"><a href="contact.html">Contact</a></div>
+    </div>   
+    <div class="content">      
       <div class="group" >
         <div class="header-content">
           <div class="header">
             <div class="header-titre">
-              <h1 style="text-align: center;">Bonjour, je m’appelle Yvain, je suis designer graphique polyvalent et spécialisé dans la création numérique.</h1>
+              <h1 style="text-align: center;">Bonjour, je m’appelle Yvain. Je suis designer graphique polyvalent, spécialisé dans la création et la gestion de visuels numérique.</h1>
             </div> 
             <div class="header-icon">
               <div class="main-icon-contener">
@@ -183,17 +182,18 @@
       </div>
     </div>
     <script>
-      //fonction menu  
-      var prevScrollpos = window.pageYOffset;
-      window.onscroll = function() {
-      var currentScrollPos = window.pageYOffset;
-        if (prevScrollpos > currentScrollPos) {
-          document.getElementById("menu").style.top = "0";
-        } else {
-          document.getElementById("menu").style.top = "-80px";
-        }
-        prevScrollpos = currentScrollPos;
-      }
+   // Fonction menu  
+var prevScrollpos = window.pageYOffset;
+window.onscroll = function() {
+    var currentScrollPos = window.pageYOffset;
+    if (prevScrollpos > currentScrollPos) {
+        document.getElementById("menu").style.top = "0"; // Réapparaît en haut
+    } else {
+        document.getElementById("menu").style.top = "-80px"; // Disparaît vers le haut
+    }
+    prevScrollpos = currentScrollPos;
+}
+
    //fonction video player  
    function handleVideoPlayback() {
     const video = document.querySelector('video');
