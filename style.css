@@ -61,7 +61,7 @@ body {
     }
 
     #menu {
-      background-color: #3016dce2;
+      background-color: #f4f4f4df;
       position: fixed; /* Assure que le menu reste en haut */
       z-index: 900;
       top: 0px; /* Par défaut, le menu est visible */
@@ -186,8 +186,18 @@ body {
              -2px -2px 2px #ffffff;
     object-fit: contain;
   }
+
+  .groupimage{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+  }
+
   .content-image{
     display: flex;
+    flex-direction: column;
+    gap: 5vh;
     justify-content: center;
     padding-left: 16px;
     padding-right: 0px;
@@ -195,7 +205,7 @@ body {
   }
   .image {
     width: 100%;
-    max-width: 1440px;
+    max-width: 1200px;
     object-fit:contain;
   }
   .legende{
@@ -205,6 +215,9 @@ body {
    margin-left: 20px;
    gap: 10px;
   }
+  .legendeIM{
+    margin-left: 200px;
+   }
   .texte-legende{
     padding-left: 16px;
     border-left: 2px solid #91866C; 
@@ -241,12 +254,18 @@ body {
     animation-range: 30% 35%;
   }
   .group-motion{
-    background-color: #000000;
-    height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+       background-color: #000000;
+      height: 100vh;
   }
   .bkgvideo {
     display: flex;
     justify-content: center;
+    flex-direction: column;
+    gap: 5vh;
+    max-width: 1200px;
   }
   .vid {
     max-width: 1300px;
@@ -323,27 +342,26 @@ body {
     padding: 0px;
 
   }
-  .masonry-list { 
-  column-count: 3;
-  columns: 150px;
-  column-gap: 5px;
-
-  }
-  #photographie{
-    padding-bottom: 10vh;
-  }
   .container {
+    padding-top: 10vh;
     width: auto;
     margin: auto;
 }
-.expandable {
-    width: 100%;
-    background-color: #f0f0f0;
-    transition: height 0.9s ease-in-out;
+#photographie{
+  padding-bottom: 10vh;
 }
+  .masonry-list { 
+  column-count: 3;
+  columns: 140px;
+  column-gap: 5px;
+  }
+  .legende-photo{
+    margin-top:5vh;
+  }
+ 
 .button-container {
-    display: none;
-    justify-content: center;
+  display: flex;
+justify-content: center;
 }
 	/* Scroll-Timeline Supported, Yay! */
 		@supports (animation-timeline: view()) {
@@ -427,9 +445,7 @@ body {
       margin-left: 0px;
       margin-right: 0px;
     }
-    .group-motion{
-      height: 80vw;
-    }
+
   }  
   @media all and (max-width: 960px) {
     .header-icon{
@@ -437,28 +453,28 @@ body {
        padding-right: 10vw;
      }
     }
+    #photographie{
+      padding-bottom: 20vh;
+    }
     @media all and (max-width: 768px) {
       .container {
-        height: 500px;
-        overflow: hidden;
-    }
-    .expandable {
-        height: 500px;
-        overflow: hidden;
-    }
-    .expanded {
-        height: auto;
+        padding-top: 10vh;
     }
     .button-container {
         display: flex;
-        margin-top: 10px;
+        margin-top: 15px;
     }
     #photographie{
-      padding-bottom: 22vh;
+      padding-bottom: 60vh;
     }
-
+    .masonry-list { 
+      column-count: 3;
+      columns: 120px;
+      column-gap: 5px;
+      }
     }
   @media all and (max-width: 700px) {
+
     .iconheader{
       height: 120px;
       width: 120px;
@@ -467,14 +483,20 @@ body {
      font-size: 36px;
      line-height: 1.2;
     }
-    .group-motion{
-      height: 85vw;
+    .container {
+      padding-top: 10vh;
+  }
+    #photographie{
+      padding-bottom: 50vh;
     }
+    .masonry-list { 
+      column-count: 3;
+      columns: 100px;
+      column-gap: 5px;
+      }
   }  
   @media all and (max-width: 600px) {
-    .group-motion{
-      height: 90vw;
-    }
+
     .header-content{
       top: 14vh;
       padding-left: 2rem;
@@ -492,6 +514,14 @@ body {
     .header-icon{
       justify-content:space-between;
     }
+    .container {
+      padding-top: 5vh;
+  }
+    .masonry-list { 
+      column-count: 3;
+      columns: 90px;
+      column-gap: 5px;
+      }
   }
 
   @media all and (max-width: 500px){
@@ -499,9 +529,7 @@ body {
       margin: 0;
       padding: 0;
   }
-  .group-motion{
-    height: 100vw;
-  }
+
   .image {
     width: 100%;
     height: 80vh;
@@ -601,17 +629,9 @@ body {
         width: 300px;
         height: 300px;
       }
-      .container {
-        height: 500px;
-        overflow: hidden;
-    }
-    .expandable {
-        height: 500px;
-        overflow: hidden;
-    }
-    .expanded {
-        height: auto;
-    }
+    .container {
+      padding-top: 10vh;
+  }
     .button-container {
         display: flex;
         margin-top: 10px;
@@ -619,5 +639,5 @@ body {
     .group-motion{
     padding-bottom: 10vh;
     }
-      
+    
   }

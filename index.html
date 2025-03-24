@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Portfolio</title>
   <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="picturegrid.css">
   <script src="action.js"></script>
 </head>
   <body> 
@@ -45,12 +44,13 @@
           </div> 
         </div>
       </div>
-      <div class="group" id="UX-UI" >
-        <div class="content-image image1"><img class="image" src="images/main-UXUI.png" alt="image UX UI"/></div>
-        <div class="legende">
+      <div class="group groupimage" id="UX-UI" >
+        <div class="content-image image1"><img class="image" src="images/main-UXUI.png" alt="image UX UI"/>
+        <div class="legende ">
           <img class="icon-legende" src="images/icon-UXUI-legende.png" alt="UX/UI"/>
-          <div class="texte-legende">Expérience utilisateur (UX) <br> Conception visuelle <br> Interface Web & App (UI) <br> Interactivité</div>
+          <div class="texte-legende">Conception visuelle <br> Expérience utilisateur (UX) <br> Interface Web & App (UI) <br> Interactivité</div>
         </div>
+      </div>
       </div>
       <div class="group"  id="visual" style="background-color: rgb(219, 219, 219); padding-top: 3vh;">
         <ul class="slides" id="slides">
@@ -113,15 +113,15 @@
             <source src="images/showreel.mp4" type="video/mp4" />     
             <p>Votre navigateur ne prend pas en charge les vidéos HTML5. Voici, à la place, un <a href="rabbit320.mp4">lien à la vidéo</a>.</p>
           </video>
+          <div class="legende">
+            <img class="icon-legende" src="images/icon-motion-legende.png" alt="motion"/>
+            <div class="texte-legende" style="color: rgb(255, 255, 255);">Générique audiovisuel <br> Teaser & Splashscreen<br> Animations fonctionnelles <br> Visual feedback</div>
+          </div>
         </div>
-        <div class="legende">
-          <img class="icon-legende" src="images/icon-motion-legende.png" alt="motion"/>
-          <div class="texte-legende" style="color: rgb(255, 255, 255);">Générique audiovisuel <br> Teaser & Splashscreen<br> Animations fonctionnelles <br> Visual feedback</div>
-        </div>
+        
       </div>
-      <div class="group" id="photographie" style="padding-top: 6vh;" >
+      <div class="group" id="photographie" >
         <div class="container">
-          <div class="expandable" id="content">
             <div class=" masonry-list">
               <img src="images/photos/p2.jpg" alt="">
               <img src="images/photos/p1.jpg" alt="">
@@ -170,15 +170,12 @@
               <img src="images/photos/p47.jpg" alt="">
               <img src="images/photos/p48.jpg" alt="">
             </div>
-        </div>
-      </div>
-      <div class="button-container">
-        <div class="menu-item" id="toggleButton">Afficher plus</div>
-      </div>
-        <div class="legende">
-          <img class="icon-legende" src="images/icon-photo-legende.png" alt="Photo"/>
-          <div class="texte-legende">Photographie de rue <br> Photographie de portrait <br> Numérique et argentique <br> Noir/blanc et couleur </div>
-        </div>
+            <div class="legende legende-photo">
+              <img class="icon-legende" src="images/icon-photo-legende.png" alt="Photo"/>
+              <div class="texte-legende">Photographie de rue <br> Photographie de portrait <br> Numérique et argentique <br> Noir/blanc et couleur </div>
+            </div>
+             
+          </div>  
       </div>
     </div>
     <script>
